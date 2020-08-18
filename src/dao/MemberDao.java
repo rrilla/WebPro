@@ -81,7 +81,7 @@ public class MemberDao {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "insert into member(id, pw, name, address, one_s) values(?, ?, ?, ?, ?)";
+		String sql = "insert into member(no, id, pw, name, address, one_s) values(member_seq.nextval, ?, ?, ?, ?, ?)";
 		try {
 			conn = DBconn.getConnection();
 			ps = conn.prepareStatement(sql);
