@@ -40,6 +40,14 @@
 	  font-weight: 700;
 	  text-transform: capitalize; 
 	}
+	.oneMusic-btn.btn-2 {
+    	background-color: #000000;
+    	color: #ffffff; 
+    }
+    .oneMusic-btn.btn-2:hover{
+      background-color: #ffffff;
+      color: #000000; 
+    }
 </style>
 
 </head>
@@ -59,7 +67,7 @@
     <header class="header-area">
         <!-- Navbar Area -->
         <div class="oneMusic-main-menu">
-            <div class="classy-nav-container breakpoint-off">
+            <div class="classy-nav-container breakpoint-off" style="background: #000000;">
                 <div class="container">
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="oneMusicNav">
@@ -96,7 +104,7 @@
 
                                     <!-- Cart Button -->
                                     <div class="cart-btn">
-                                        <p><span class="icon-shopping-cart"></span> <span class="quantity">1</span></p>
+                                        <p onClick="location.href=mypage.jsp"><span class="icon-shopping-cart"></span> <span class="quantity">1</span></p>
                                     </div>
                                 </div>
                             </div>
