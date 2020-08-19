@@ -8,6 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import dao.MemberDao;
 
 @WebServlet("*.do")
 public class BoardServlet extends HttpServlet {
@@ -24,6 +27,20 @@ public class BoardServlet extends HttpServlet {
 		
 		if(action.equals("main.do")) {
 			
+		}else if(action.equals("../login.do")) {
+			String id=request.getParameter("id");
+			String pw=request.getParameter("pw");
+			int n=MemberDao.getInstance().login(id,pw);
+			//out.print(n);
+			if(n==1) {
+				HttpSession session=request.getSession();
+				session.setAttribute("session_id", id);
+				writer.print("success");
+			}else if(n==0) {
+				writer.print("password error");
+			}else {
+				writer.print("id error");
+			}
 		}
 	}
     

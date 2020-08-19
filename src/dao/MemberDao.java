@@ -137,7 +137,7 @@ public class MemberDao {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		String sql = "select pw from member where id=?";
+		String sql = "select password from member where id=?";
 		try {
 			conn = DBconn.getConnection();
 			ps = conn.prepareStatement(sql);

@@ -23,12 +23,12 @@
                             <form action="login.do" method="post">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">I D</label>
-                                    <input type="email"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter E-mail">
+                                    <input type="text" name="id" class="form-control" aria-describedby="emailHelp" placeholder="Enter E-mail">
                                     <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" id="exampleInputPassword1" placeholder="Password">
+                                    <input type="password" name="pw" class="form-control" placeholder="Password">
                                 </div>
                                 <button type=submit class="btn oneMusic-btn mt-30">Login</button>
                                 <a href="../web/join.jsp"><button type="button" class="btn oneMusic-btn mt-30">Register</button></a>
